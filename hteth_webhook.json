@@ -1,0 +1,16 @@
+{
+  "id": "68c4ed19d34d4b6a0a3393846b0bd523",
+  "created": "2025-09-13T04:03:37.736Z",
+  "scope": "wallet",
+  "walletId": "68c4ed17aa5e1717f4cd45cb6e407501",
+  "coin": "hteth",
+  "type": "transfer",
+  "url": "https://webhook.site/291f1880-ca35-462d-af39-18a458208c85",
+  "version": 2,
+  "numConfirmations": 1,
+  "state": "active",
+  "successiveFailedAttempts": 0,
+  "listenToFailureStates": false,
+  "txRequestStates": [],
+  "txRequestTransactionStates": []
+}
