@@ -1,4 +1,5 @@
 import os
+import json
 import requests
 from dotenv import load_dotenv
 
@@ -27,15 +28,23 @@ payload = {
     "enterprise": BITGO_ENTERPRISE_ID,
     "type": "hot",   # hot wallet (self-managed)
     "multisigType": "tss",
-    "walletVersion": 3
+    "walletVersion": 3   # wallet version supported for EVM TSS
 }
 
 # POST request to create the wallet
 response = requests.post(url, headers=headers, json=payload)
 
-# Print result
 if response.status_code == 200:
+    wallet_data = response.json()
+
+    # Pretty print to console
     print("✅ Wallet created successfully:")
-    print(response.json())
+    print(json.dumps(wallet_data, indent=2))
+
+    # Save to JSON file
+    with open("hteth_wallet.json", "w") as f:
+        json.dump(wallet_data, f, indent=2)
+
+    print("\n📂 Wallet data saved to hteth_wallet.json")
 else:
     print(f"❌ Error {response.status_code}: {response.text}")
