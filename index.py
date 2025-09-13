@@ -46,33 +46,3 @@ if wallet_response.status_code == 200:
         json.dump(wallet_data, f, indent=2)
     print("\n📂 Wallet data saved to hteth_wallet.json")
 
-    # Step 2: Create Webhook for the Wallet
-    wallet_id = wallet_data["wallet"]["id"]  # Get wallet ID from response
-    webhook_url = f"{BASE_URL}/hteth/wallet/{wallet_id}/webhooks"
-
-    webhook_payload = {
-        "type": "transfer",  # Monitor transfer events
-        "url": WEBHOOK_URL,  # Use webhook.site URL from .env
-        "tokenConfig": {
-            "hteth": True  # Enable HTETH token monitoring
-        },
-        "state": "active",
-        "numConfirmations": 1  # Trigger webhook after 1 confirmation
-    }
-
-    # POST request to create the webhook
-    webhook_response = requests.post(webhook_url, headers=headers, json=webhook_payload)
-
-    if webhook_response.status_code == 200:
-        webhook_data = webhook_response.json()
-        print("\n✅ Webhook created successfully:")
-        print(json.dumps(webhook_data, indent=2))
-
-        # Save webhook data to JSON file
-        with open("hteth_webhook.json", "w") as f:
-            json.dump(webhook_data, f, indent=2)
-        print("\n📂 Webhook data saved to hteth_webhook.json")
-    else:
-        print(f"\n❌ Webhook creation failed with status {webhook_response.status_code}: {webhook_response.text}")
-else:
-    print(f"❌ Wallet creation failed with status {wallet_response.status_code}: {wallet_response.text}")
