@@ -1,0 +1,21 @@
+{
+  "hash": "0xe7fff1b7480c26fc37e106766bd47206332b3a20a5682beee1ce71e47b706c7a", 
+  "transfer": "68c53bc4f28ef04a6a6c081f87381c1e",
+  "coin": "hteth",
+  "type": "transfer",
+  "state": "confirmed",
+  "wallet": "68c4ed17aa5e1717f4cd45cb6e407501",
+  "walletType": "hot",
+  "transferType": "receive",
+  "baseValue": 10000000000000000,
+  "baseValueString": "10000000000000000",
+  "value": 10000000000000000,
+  "valueString": "10000000000000000",
+  "feeString": "21537587904000",
+  "initiator": [
+    "external"
+  ],
+  "systemNotes": {
+    "warning": "Do not rely solely on this webhook for final state. Always verify the current status via the API to ensure consistency. View the BitGo developer documentation and guides for more information."
+  }
+}

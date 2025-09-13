@@ -131,3 +131,20 @@ Verify the BitGo Express server is running.
   ```
   {"status":"service is ok!","environment":"BitGo Testnet","configEnv":"testnet","configVersion":79}
   ```
+
+
+### Configure Environment Variables
+
+Create a .env file in the project directory to store environment-specific configurations.
+
+Steps:
+
+Create a file named .env in the root of your project directory.
+
+Add the following fields to the .env file (leave the values blank or insert your specific values as needed):
+
+BITGO_ACCESS_TOKEN=<insert your access token here>
+BITGO_ENTERPRISE_ID=<insert your enterprise ID here>
+BITGO_WALLET_PASSPHRASE=<insert your wallet passphrase here>
+WEBHOOK_URL=<insert your webhook URL here>
+WALLET_ID=<insert your wallet ID here>
