@@ -131,14 +131,3 @@ Verify the BitGo Express server is running.
   ```
   {"status":"service is ok!","environment":"BitGo Testnet","configEnv":"testnet","configVersion":79}
   ```
-
-## Environment Setup
-
-Before running any scripts, you must create a `.env` file in the project root directory to securely store your BitGo credentials.
-
-### 1. Create a `.env` File
-Create a file named `.env` in the project root with the following content:
-
-```bash
-BITGO_ACCESS_TOKEN=your_bitgo_access_token_here
-BITGO_ENTERPRISE_ID=your_enterprise_id_here

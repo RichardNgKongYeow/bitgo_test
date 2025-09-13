@@ -26,8 +26,7 @@ payload = {
     "passphrase": "StrongPassphrase123!",  # replace with your secure passphrase
     "enterprise": BITGO_ENTERPRISE_ID,
     "type": "hot",   # hot wallet (self-managed)
-    "multisigType": "tss",
-    "walletVersion": 3
+    "multisigType": "tss"
 }
 
 # POST request to create the wallet
